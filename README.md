@@ -8,4 +8,6 @@ You will need to convert to phar before uploading to /include/plugins directory.
 
 Good tool to use: https://phar.scer.io/
 
-Just Zip the files up, and drag the zip file into the window...
+Just Zip the files up, and drag the zip file into the window.
+
+Feel free to contribute improvements...
