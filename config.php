@@ -23,11 +23,11 @@ class CustomCodePluginConfig extends PluginConfig {
             )),
             'custom-code-css' => new TextareaField(array(
                 'label' => $__('Custom CSS'),
-                'configuration' => array('rows'=>10, 'html'=>false),                
+                'configuration' => array('rows'=>10, 'cols'=>80, 'html'=>false),                
             )),
             'custom-code-js' => new TextareaField(array(
                 'label' => $__('Custom JS'),
-                'configuration' => array('rows'=>10, 'html'=>false),                
+                'configuration' => array('rows'=>10, 'cols'=>80, 'html'=>false),                
             )),
         );
     }
