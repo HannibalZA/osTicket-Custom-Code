@@ -1,0 +1,86 @@
+#header {
+    padding: 10px!important;
+}
+#container {
+    width: auto!important;
+}
+table {
+    width: 100%;
+}
+#nav {
+    margin: 0 0 10px 0 !important;
+    padding:0!important;
+    height:auto!important;
+    background:none!important;
+    border-top:0!important;
+    -moz-box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    background-color:#000!important;
+}
+#nav li a {
+    background-image:unset!important;
+    color:#fff!important;
+    padding:10px!important;
+    border-radius:0;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+}
+#nav li a.active, #nav li a:hover {
+    background-color: #eee;
+    color:#000!important;
+}
+a:hover {
+    border-bottom:0!important;
+}
+a {
+    margin-bottom:0!important;
+}
+input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+input, select, textarea {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    color: #444;
+}
+select {
+    background-color: #eee;
+}
+h1,h2,h3,h4,h5,h6 {
+    color:#555!important;
+}
+#ticketTable {
+    margin: 15px 0px;
+}
+#ticketTable caption {
+    background: none !important;
+    border: 0px !important;
+    font-size:85%;
+}
+#ticketTable th {
+    background: #eee!important;
+    border: 1px solid #ccc!important;
+    padding: 5px 10px!important;
+}
+#ticketTable td {
+    border: 1px solid #ccc!important;
+    padding:5px 10px!important;
+}
+.button {
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+    -moz-box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+}
+#landing_page .sidebar {
+    display:none;
+}
