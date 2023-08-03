@@ -1,4 +1,5 @@
 <?php
+require_once('polyfill.php');
 require_once INCLUDE_DIR . 'class.plugin.php';
 
 class CustomCodePluginConfig extends PluginConfig {

@@ -1,4 +1,5 @@
 <?php
+require_once('polyfill.php');
 require_once(INCLUDE_DIR . 'class.plugin.php');		
 require_once(INCLUDE_DIR . 'class.osticket.php');
 require_once('config.php');
