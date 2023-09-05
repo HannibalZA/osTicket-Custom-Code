@@ -1,4 +1,5 @@
 <?php
+require_once('polyfill.php');
 require_once INCLUDE_DIR . 'class.plugin.php';
 
 class CustomCodePluginConfig extends PluginConfig {
@@ -22,11 +23,19 @@ class CustomCodePluginConfig extends PluginConfig {
                 'label' => $__('Enter your custom code below')
             )),
             'custom-code-css' => new TextareaField(array(
-                'label' => $__('Custom CSS'),
+                'label' => $__('Custom Client CSS'),
                 'configuration' => array('rows'=>10, 'cols'=>80, 'html'=>false),                
             )),
             'custom-code-js' => new TextareaField(array(
-                'label' => $__('Custom JS'),
+                'label' => $__('Custom Client JS'),
+                'configuration' => array('rows'=>10, 'cols'=>80, 'html'=>false),                
+            )),
+            'custom-staff-code-css' => new TextareaField(array(
+                'label' => $__('Custom Staff CSS'),
+                'configuration' => array('rows'=>10, 'cols'=>80, 'html'=>false),                
+            )),
+            'custom-staff-code-js' => new TextareaField(array(
+                'label' => $__('Custom Staff JS'),
                 'configuration' => array('rows'=>10, 'cols'=>80, 'html'=>false),                
             )),
         );
@@ -50,6 +59,33 @@ class CustomCodePluginConfig extends PluginConfig {
 
             $css = $config['custom-code-css'];
             $js = $config['custom-code-js'];
+
+            $replace = $tag_start;
+            $replace .= "<style>" . $css . "</style>";
+            $replace .= "<script>" . $js . "</script>";
+            $replace .= $tag_end;
+            $replace .= "</head>";
+
+            $contents = str_replace($find, $replace, $contents);
+
+            file_put_contents($filepath, $contents);
+
+            //staff code
+            $filepath = INCLUDE_DIR . "staff/header.inc.php";
+
+            $find = "</head>";
+            $tag_start = "<!-- start custom code -->";
+            $tag_end = "<!-- end custom code-->";
+
+            $contents = file_get_contents($filepath);
+
+            //clean contents up
+            $contents = preg_replace("#" . $tag_start ."(.*?)" . $tag_end . "#s", "", $contents);
+            $contents = str_replace($tag_start, "", $contents);
+            $contents = str_replace($tag_end, "", $contents);
+
+            $css = $config['custom-staff-code-css'];
+            $js = $config['custom-staff-code-js'];
 
             $replace = $tag_start;
             $replace .= "<style>" . $css . "</style>";
