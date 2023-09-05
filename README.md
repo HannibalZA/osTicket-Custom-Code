@@ -1,6 +1,6 @@
 # osTicket-Custom-Code
 
-osTicket plugin that allows for inserting custom CSS and JS code to the client Front End.
+osTicket plugin that allows for inserting custom CSS and JS code to the client and staff interfaces.
 
 ![image](https://user-images.githubusercontent.com/2007626/211731476-9ea93a58-49bf-44d2-9790-a97befd08569.png)
 ![image](https://user-images.githubusercontent.com/2007626/211731517-b81acca0-0a27-496d-9820-1209ffcd306e.png)
