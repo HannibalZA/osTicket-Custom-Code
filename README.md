@@ -9,10 +9,16 @@ osTicket plugin that allows for inserting custom CSS and JS code to the client a
 
 Disclaimer: This is not the ideal solution, but works well and is upgrade-proof without amending core files. 
 
+Feel free to contribute improvements...
+
+## Installation
+
 You will need to convert to phar before uploading to /include/plugins directory.
 
-Good tool to use: https://phar.scer.io/
-
-Just Zip the files up, and drag the zip file into the window.
-
-Feel free to contribute improvements...
+1. Download the zip file
+2. The initial plugin and config files need to be in the root of a zip file for phar processing. No subdirectory.
+3. Upload to a phar converter tool such as: https://www.pustudy.com/online_tools/phar-converter/
+4. Upload customcode.phar file as a normal plugin to /include/plugins directory
+5. In Admin Panel > Manage > Plugins > Install
+6. Add an "Instance"
+7. Now you will see a "Config" tab to allow you to add CSS/JS to the client and staff areas
